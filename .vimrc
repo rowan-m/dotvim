@@ -70,8 +70,10 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 set cursorline
 
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
-set smarttab
+set expandtab
+set shiftround
 set smartindent
 set autoindent
 
@@ -80,8 +82,19 @@ au BufRead,BufNewFile *.tac set filetype=python
 au BufRead,BufNewFile Vagrantfile set filetype=ruby
 
 set encoding=utf-8
-set listchars=tab:».,eol:¶,trail:-
+set listchars=precedes:.,tab:».,eol:¶,trail:-
 set list
 
 " "sudo" save:
 cmap w!! w !sudo tee % >/dev/null
+
+" NERDTree options
+:let NERDChristmasTree=1
+:let NERDTreeCaseSensitiveSort=1
+:let NERDTreeChDirMode=2
+:let NERDTreeBookmarksFile = $HOME . "/.vim/NERDTreeBookmarks"
+:let NERDTreeShowBookmarks=1
+:let NERDTreeShowHidden=1
+:let NERDTreeQuitOnOpen=1
+:map <Leader>n :NERDTree<CR>
+
