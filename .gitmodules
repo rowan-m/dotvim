@@ -7,3 +7,6 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/vim-scripts/The-NERD-tree.git
+[submodule "bundle/vim-rst-tables"]
+	path = bundle/vim-rst-tables
+	url = git://github.com/nvie/vim-rst-tables

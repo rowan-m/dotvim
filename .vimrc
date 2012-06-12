@@ -10,6 +10,7 @@ set background=dark
 let g:solarized_termtrans=1
 let g:solarized_visibility="low"
 colorscheme solarized
+"colorscheme pablo
 
 " mapleader
 let mapleader=","
@@ -84,6 +85,12 @@ au BufRead,BufNewFile Vagrantfile set filetype=ruby
 set encoding=utf-8
 set listchars=precedes:.,tab:».,eol:¶,trail:-
 set list
+
+set wrap
+set linebreak
+set textwidth=0
+set wrapmargin=0
+
 
 " "sudo" save:
 cmap w!! w !sudo tee % >/dev/null
